@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/profile"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jiri KLOMFAR"
+        android:textColor="#52D017"
+        android:fontFamily="fantasy"
+        android:textSize="30sp"
+        android:layout_toRightOf="@id/profile_picture"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:text="Android Developer Beginner"
+        android:fontFamily="fantasy"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@id/profile_picture"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="klomfar.jiri@gmail.com"
+        android:textColor="#52D017"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:layout_below="@+id/profession"
+        android:layout_toEndOf="@+id/profile_picture"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconlayout"
+        android:layout_below="@id/profile_picture">
+
+        <ImageView
+            android:id="@+id/gico"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/google"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp" />
+
+        <ImageView
+            android:id="@+id/fbico"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/facebook"
+            android:layout_below="@id/gico"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp" />
+
+        <ImageView
+            android:id="@+id/twico"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/twitter"
+            android:layout_below="@id/fbico"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="10sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textlayout"
+        android:layout_below="@+id/profile_picture"
+        android:layout_centerHorizontal="false"
+        android:layout_alignBottom="@+id/iconlayout"
+        android:layout_toRightOf="@+id/iconlayout"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/googletext"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="false"
+            android:layout_marginTop="16dp"
+            tools:text="Google+ Profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/facebooktext"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/googletext"
+            android:autoLink="web"
+            tools:text="Facebook Profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/twittertext"
+            android:textColor="@android:color/white"
+            android:autoLink="web"
+            android:textSize="18sp"
+            android:layout_marginBottom="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/googletext"
+            tools:text="Twitter Profile"
+            android:text="http://www.twitter.com/klomfar1989" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/learn"
+        android:id="@+id/learn"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/textlayout"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/number"
+        android:text ="+420775950183"
+        android:textColor="#52D017"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerInParent="false"
+        android:layout_alignBottom="@+id/cz"
+        android:layout_toEndOf="@+id/cz" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/cz"
+        android:id="@+id/cz"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignBottom="@+id/learn"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
